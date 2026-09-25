@@ -1,0 +1,1026 @@
+/* =========================================================
+   SAFEHAVEN - SETTINGS PAGE
+   ========================================================= */
+
+.settings-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 28px;
+  box-sizing: border-box;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.settings-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.settings-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-primary);
+}
+
+.settings-page-header h1 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.settings-page-header p {
+  margin: 7px 0 0 33px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.settings-save-message,
+.settings-error-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 13px 15px;
+  border-radius: var(--radius-md);
+}
+
+.settings-save-message {
+  border: 1px solid #bbf7d0;
+  background: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.settings-error-message {
+  border: 1px solid #fecaca;
+  background: var(--color-danger-light);
+  color: var(--color-danger);
+}
+
+.settings-save-message > div,
+.settings-error-message > div {
+  min-width: 0;
+}
+
+.settings-save-message strong,
+.settings-save-message span,
+.settings-error-message strong,
+.settings-error-message span {
+  display: block;
+}
+
+.settings-save-message strong,
+.settings-error-message strong {
+  margin-bottom: 2px;
+  font-size: 13px;
+}
+
+.settings-save-message span {
+  color: #166534;
+  font-size: 12px;
+}
+
+.settings-error-message span {
+  color: #7f1d1d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SETTINGS SECTION
+   ========================================================= */
+
+.settings-section {
+  margin-bottom: 20px;
+  padding: 21px 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.settings-section-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 20px;
+}
+
+.settings-section-header h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.settings-section-header p {
+  margin: 4px 0 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SECTION ICON
+   ========================================================= */
+
+.section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.section-icon.blue {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.section-icon.green {
+  background: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.section-icon.orange {
+  background: var(--color-warning-light);
+  color: var(--color-warning);
+}
+
+.section-icon.purple {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+/* =========================================================
+   THRESHOLDS
+   ========================================================= */
+
+.threshold-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  align-items: center;
+  padding: 0 0 9px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 10px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
+}
+
+.threshold-header > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  text-align: center;
+}
+
+.threshold-list {
+  width: 100%;
+}
+
+.threshold-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  align-items: center;
+  gap: 25px;
+  min-height: 78px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.threshold-row:last-child {
+  border-bottom: 0;
+}
+
+.threshold-info {
+  min-width: 0;
+}
+
+.threshold-info strong {
+  display: block;
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.threshold-info span {
+  display: block;
+  margin-top: 4px;
+  color: var(--color-text-muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.threshold-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.threshold-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.threshold-fields label > span {
+  display: none;
+}
+
+.threshold-input {
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  background: var(--color-background);
+}
+
+.threshold-input:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+  background: var(--color-surface);
+}
+
+.threshold-input.danger-input {
+  border-color: #fecaca;
+}
+
+.threshold-input input {
+  width: 100%;
+  min-width: 0;
+  height: 36px;
+  padding: 0 8px 0 10px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.threshold-input > span {
+  padding-right: 9px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.threshold-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 10px 12px;
+  border: 1px solid #bfdbfe;
+  border-radius: 9px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   AUTOMATION + NOTIFICATIONS
+   VERTICAL ALIGNMENT
+   ========================================================= */
+
+.settings-two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 20px;
+}
+
+.settings-two-column > .settings-section {
+  min-width: 0;
+  height: 100%;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   SETTINGS OPTIONS
+   ========================================================= */
+
+.settings-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 70px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.settings-option:last-child {
+  border-bottom: 0;
+}
+
+.settings-option > div {
+  min-width: 0;
+}
+
+.settings-option strong {
+  display: block;
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.settings-option > div > span {
+  display: block;
+  max-width: 450px;
+  margin-top: 4px;
+  color: var(--color-text-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   TOGGLE
+   ========================================================= */
+
+.settings-toggle {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.settings-toggle span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.18);
+  transition: transform 0.2s ease;
+}
+
+.settings-toggle.enabled {
+  background: var(--color-primary);
+}
+
+.settings-toggle.enabled span {
+  transform: translateX(18px);
+}
+
+/* =========================================================
+   SMS CONFIGURATION
+   ========================================================= */
+
+.sms-settings-box {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+}
+
+.sms-settings-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--color-primary);
+}
+
+.sms-settings-title svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sms-settings-title > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.sms-settings-title strong {
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.sms-settings-title span {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SMS FIELD
+   ========================================================= */
+
+.sms-field {
+  margin-top: 16px;
+}
+
+.sms-field:first-of-type {
+  margin-top: 0;
+}
+
+.sms-field > label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sms-field-help {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-text-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SMS PHONE NUMBER
+   ========================================================= */
+
+.sms-add-number {
+  display: flex;
+  gap: 8px;
+}
+
+.sms-add-number input {
+  flex: 1;
+  min-width: 0;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  outline: none;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.sms-add-number input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.sms-add-number button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 110px;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.sms-add-number button:hover {
+  background: var(--color-primary-dark);
+}
+
+.sms-add-number button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   SMS NUMBER LIST
+   ========================================================= */
+
+.sms-number-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.sms-number-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+}
+
+.sms-number-item > span {
+  min-width: 0;
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.sms-number-item button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  background: var(--color-danger-light);
+  color: var(--color-danger);
+  cursor: pointer;
+}
+
+.sms-number-item button:hover {
+  background: #fee2e2;
+}
+
+.sms-number-item button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sms-empty {
+  padding: 10px;
+  border: 1px dashed var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text-muted);
+  background: var(--color-background);
+  font-size: 11px;
+  text-align: center;
+}
+
+/* =========================================================
+   SMS COOLDOWN
+   ========================================================= */
+
+.sms-cooldown-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sms-cooldown-input input {
+  width: 110px;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  outline: none;
+  font-size: 12px;
+}
+
+.sms-cooldown-input input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.sms-cooldown-input span {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+/* =========================================================
+   SMS MESSAGE TEXTAREA
+   ========================================================= */
+
+.sms-field textarea {
+  width: 100%;
+  min-height: 95px;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  resize: vertical;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  outline: none;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.sms-field textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.sms-character-count {
+  margin-top: 5px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  text-align: right;
+}
+
+/* =========================================================
+   SMS PLACEHOLDER HELP
+   ========================================================= */
+
+.sms-placeholder-help {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 16px;
+  padding: 11px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.sms-placeholder-help svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sms-placeholder-help > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sms-placeholder-help strong {
+  color: var(--color-text);
+  font-size: 12px;
+}
+
+.sms-placeholder-help span {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.sms-placeholder-help code {
+  padding: 2px 4px;
+  border-radius: 4px;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-size: 10px;
+}
+
+/* =========================================================
+   NOTIFICATION INFO
+   ========================================================= */
+
+.notification-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  background: var(--color-background);
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.notification-info svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+/* =========================================================
+   DEVICE CONFIGURATION
+   ========================================================= */
+
+.device-settings {
+  margin-top: 20px;
+}
+
+.device-config-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.device-config-item {
+  min-width: 0;
+  min-height: 76px;
+  padding: 13px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  background: var(--color-background);
+  box-sizing: border-box;
+}
+
+.device-config-item > span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+}
+
+.device-config-item > strong {
+  display: block;
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   DEVICE SAFETY STATUS
+   ========================================================= */
+
+.device-status-text {
+  font-weight: 700;
+}
+
+.device-status-text.safe {
+  color: var(--color-success) !important;
+}
+
+.device-status-text.warning {
+  color: var(--color-warning) !important;
+}
+
+.device-status-text.danger {
+  color: var(--color-danger) !important;
+}
+
+.device-status-text.unknown {
+  color: var(--color-text-muted) !important;
+}
+
+/* =========================================================
+   DEVICE CONNECTION
+   ========================================================= */
+
+.online-text {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+}
+
+.online-text > span {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.online-text.online {
+  color: var(--color-success) !important;
+}
+
+.online-text.online > span {
+  background: var(--color-success);
+  box-shadow: 0 0 0 4px var(--color-success-light);
+}
+
+.online-text.offline {
+  color: var(--color-danger) !important;
+}
+
+.online-text.offline > span {
+  background: var(--color-danger);
+  box-shadow: 0 0 0 4px var(--color-danger-light);
+}
+
+.device-connection-help {
+  display: block;
+  margin-top: 5px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.settings-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.reset-settings-btn,
+.save-settings-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.reset-settings-btn {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+}
+
+.reset-settings-btn:hover {
+  background: var(--color-background);
+  border-color: var(--color-text-muted);
+}
+
+.save-settings-btn {
+  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.18);
+}
+
+.save-settings-btn:hover {
+  background: var(--color-primary-dark);
+}
+
+.reset-settings-btn:disabled,
+.save-settings-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   STORAGE NOTE
+   ========================================================= */
+
+.settings-storage-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 11px 13px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+  color: var(--color-text-muted);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.settings-storage-note svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--color-primary);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+/*
+   Normal desktop / laptop:
+   Automation + Notifications remain side-by-side.
+*/
+
+@media (max-width: 900px) {
+  .settings-page {
+    padding: 22px 20px 32px;
+  }
+
+  .threshold-header {
+    display: none;
+  }
+
+  .threshold-row {
+    grid-template-columns: 1fr;
+    gap: 13px;
+    padding: 16px 0;
+  }
+
+  .threshold-fields {
+    width: 100%;
+  }
+
+  .threshold-fields label > span {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  /*
+     Only smaller screens stack the two sections.
+  */
+
+  .settings-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .device-config-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .settings-page {
+    padding: 17px 12px 25px;
+  }
+
+  .settings-page-header {
+    gap: 15px;
+  }
+
+  .settings-page-header h1 {
+    font-size: 23px;
+  }
+
+  .settings-page-header p {
+    margin-left: 0;
+  }
+
+  .settings-section {
+    padding: 17px 15px;
+  }
+
+  .settings-section-header {
+    align-items: flex-start;
+  }
+
+  .threshold-fields {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .settings-option {
+    align-items: flex-start;
+  }
+
+  .sms-add-number {
+    flex-direction: column;
+  }
+
+  .sms-add-number button {
+    width: 100%;
+  }
+
+  .sms-cooldown-input {
+    width: 100%;
+  }
+
+  .sms-cooldown-input input {
+    width: 100%;
+  }
+
+  .device-config-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .reset-settings-btn,
+  .save-settings-btn {
+    width: 100%;
+  }
+}
